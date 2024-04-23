@@ -55,9 +55,8 @@ jobs:
 
       - name: Run unit tests
         run: |
-          nix develop -c make -j smart-contract-test
-          nix build .#hoprd-test
-          nix build .#hopli-test
+          echo "FAIL"
+          exit 1
         env:
           HOPR_NETWORK: anvil-localhost
   tests-smoke:
